@@ -1,15 +1,15 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Author ivanov = new Author("И. ", "Иванов");
+        System.out.println(ivanov.getAuthor());
+        Author petrov = new Author("П. ", "Петров");
+        System.out.println(petrov.getAuthor());
+        Book bookOfIvanov = new Book("Приключения Петрова", ivanov, 2000);
+        System.out.println("Книга: " + bookOfIvanov.getTitle() + ", автор: " + bookOfIvanov.getAuthor().getAuthor() + ", год публикации: " + bookOfIvanov.getYearOfPublic());
+        Book bookOfPetrov = new Book("Драконы Руси", petrov, 1990);
+        System.out.println("Книга: " + bookOfPetrov.getTitle() + ", автор: " + bookOfPetrov.getAuthor().getAuthor() + ", год публикации: " + bookOfPetrov.getYearOfPublic());
+        bookOfIvanov.setYearOfPublic(1994);
+        System.out.println("Год публикации: " + bookOfIvanov.getYearOfPublic());
     }
 }
