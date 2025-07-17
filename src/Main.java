@@ -11,5 +11,7 @@ public class Main {
         System.out.println("Книга: " + bookOfPetrov.getTitle() + ", автор: " + bookOfPetrov.getAuthor().getAuthor() + ", год публикации: " + bookOfPetrov.getYearOfPublic());
         bookOfIvanov.setYearOfPublic(1994);
         System.out.println("Год публикации: " + bookOfIvanov.getYearOfPublic());
+        System.out.println(bookOfPetrov);
+        System.out.println(ivanov);
     }
 }

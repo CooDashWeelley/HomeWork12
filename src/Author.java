@@ -18,4 +18,23 @@ public class Author {
     public String getAuthor() {
         return this.firstName + this.lastName;
     }
+
+    @Override
+    public String toString() {
+        return firstName + lastName;
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Author diff = (Author) other;
+        return this.getAuthor().equals(diff.getAuthor());
+    }
+
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(getAuthor());
+    }
 }
