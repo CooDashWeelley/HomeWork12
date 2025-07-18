@@ -8,10 +8,12 @@ public class Main {
         Book bookOfIvanov = new Book("Приключения Петрова", ivanov, 2000);
         System.out.println("Книга: " + bookOfIvanov.getTitle() + ", автор: " + bookOfIvanov.getAuthor().getAuthor() + ", год публикации: " + bookOfIvanov.getYearOfPublic());
         Book bookOfPetrov = new Book("Драконы Руси", petrov, 1990);
+        Book bookOfPetrov2 = new Book("Драконы Руси", petrov, 1990);
         System.out.println("Книга: " + bookOfPetrov.getTitle() + ", автор: " + bookOfPetrov.getAuthor().getAuthor() + ", год публикации: " + bookOfPetrov.getYearOfPublic());
         bookOfIvanov.setYearOfPublic(1994);
         System.out.println("Год публикации: " + bookOfIvanov.getYearOfPublic());
         System.out.println(bookOfPetrov);
         System.out.println(ivanov);
+        System.out.println(bookOfPetrov2.equals(bookOfPetrov));
     }
 }

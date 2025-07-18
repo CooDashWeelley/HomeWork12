@@ -32,11 +32,14 @@ public class Book {
 
     @Override
     public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
         if (this.getClass() != other.getClass()) {
             return false;
         }
         Book diff = (Book) other;
-        return title.equals(diff.title);
+        return this.title.equals(diff.title) && this.author.equals(diff.author) && this.yearOfPublic == diff.yearOfPublic;
     }
 
     @Override
